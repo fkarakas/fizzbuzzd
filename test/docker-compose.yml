@@ -1,0 +1,14 @@
+version: "3.5"
+
+services:
+
+  fizzbuzzd:
+    image: fkarakas/fizzbuzzd:${VERSION}
+    networks:
+      - fizzbuzzd-network
+    command: fizzbuzzd
+
+networks:
+  fizzbuzzd-network:
+    name: fizzbuzzd-network
+    driver: bridge
